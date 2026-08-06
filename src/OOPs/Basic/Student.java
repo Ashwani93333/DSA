@@ -1,4 +1,4 @@
-package OOPs;
+package OOPs.Basic;
 
 /**
  * Student class demonstrating
