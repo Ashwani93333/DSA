@@ -165,6 +165,25 @@ class SinglyLinkedList{
         newNode.next = temp.next;
         temp.next = newNode;
     }
+
+    //Search in LL
+    public int search(int key){
+        Node current = head;
+        int index =0;
+
+        if(head == null){
+            return -1;
+        }
+        while (current.next != null){
+            if(current.data == key){
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
+
+    }
 }
 
 public class LinkedList {
@@ -195,9 +214,12 @@ public class LinkedList {
 
         //Inserting in Middle of LL
         ll.insertMiddle(56,0);
+
+        //Searching in LL returning the Index of it....
+        int ans = ll.search(3);
+        System.out.println("Index" + ans);
+
         ll.display();
-
-
 
         //---size---
         System.out.println("Size of LinkedList: " + ll.getSize());
