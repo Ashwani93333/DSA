@@ -184,6 +184,25 @@ class SinglyLinkedList{
         return -1;
 
     }
+
+
+    //Reverse LL
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+
+        while (curr != null) {
+            Node next = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
+
 }
 
 public class LinkedList {
@@ -218,6 +237,10 @@ public class LinkedList {
         //Searching in LL returning the Index of it....
         int ans = ll.search(3);
         System.out.println("Index" + ans);
+
+
+        //reverse
+        ll.reverse();
 
         ll.display();
 
